@@ -18,7 +18,7 @@ public class RndAlphabetGenerator implements Generator<Character> {
     }
 
     @Override
-    public Set<Character> getGenerator() {
+    public Set<Character> getContainer() {
         return alphabetSet;
     }
 }

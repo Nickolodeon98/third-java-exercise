@@ -20,6 +20,4 @@ public class RealRndNum {
         }
         System.out.println(noDuplicate);
     }
-
-
 }

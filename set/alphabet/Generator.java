@@ -4,5 +4,5 @@ import java.util.Set;
 
 public interface Generator<T> {
     T generate();
-    Set<T> getGenerator();
+    Set<T> getContainer();
 }

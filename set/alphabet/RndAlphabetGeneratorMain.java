@@ -6,7 +6,7 @@ public class RndAlphabetGeneratorMain {
     public static void main(String[] args) {
         Generator<Character> rndAlphabetGenerator = new RndAlphabetGenerator();
 
-        Set<Character> set = rndAlphabetGenerator.getGenerator();
+        Set<Character> set = rndAlphabetGenerator.getContainer();
 
         for (int i = 0; i < 50; i++) {
             set.add(rndAlphabetGenerator.generate());
