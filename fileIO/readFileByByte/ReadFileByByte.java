@@ -9,14 +9,13 @@ import java.nio.file.Paths;
 
 public class ReadFileByByte {
     private String filename;
-
-    public ReadFileByByte(String filename) {
+    private BufferedReader reader;
+    public ReadFileByByte(String filename) throws IOException{
         this.filename = filename;
+        this.reader = new BufferedReader(new FileReader(filename), 32 *1024);
     }
 
     public char readOneByte() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(filename), 32 *1024);
-
         return (char) reader.read();
     }
 }
