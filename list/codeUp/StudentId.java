@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentId {
-    private String codeNum;
+    private String code;
     private String name;
-    private List<Integer> id;
+    private int id;
+    private List<StudentId> idLists;
 
-    public StudentId(String codeNum, String name) {
-        this.codeNum = codeNum;
+    public StudentId(String code, String name) {
+        this.code = code;
         this.name = name;
-        this.id = new ArrayList<>();
+        this.id = id;
     }
 
+    public void inputProcess(String code, String name, int id) {
+        idLists = new ArrayList<>();
+//        id.add()
+    }
 
 }
