@@ -17,6 +17,5 @@ public class CountLettersMain {
         for (Map.Entry<Character, Integer> characterIntegerEntry : testMap.entrySet()) {
             System.out.println("문자 " + characterIntegerEntry.getKey() + "은(는) " + characterIntegerEntry.getValue() + "개 있습니다.");
         }
-
     }
 }
