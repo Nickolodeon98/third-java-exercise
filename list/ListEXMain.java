@@ -1,4 +1,4 @@
-package llist;
+package list;
 
 import java.util.List;
 
