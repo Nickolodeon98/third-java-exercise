@@ -20,4 +20,6 @@
 
 ```-> MapEX: HashMap을 이용하여 키, 값 짝을 저장```
 
-```-> CountLetters, CountLettersMain: 문자열의 알파벳 문자 개수를 HashMap을 이용해 세는 클래스,새로운 알파벳이 나오면 값에 1을 추가하고 이전에 나온 알파벳이면 원래 값에 1을 더한다.```
+#### 활용예제: 문자열의 알파벳 문자 개수를 HashMap을 이용해 세는 클래스 구현
+
+```-> CountLetters, CountLettersMain: 새로운 알파벳이 나오면 값에 1을 추가하고 이전에 나온 알파벳이면 원래 값에 1을 더한다.```
