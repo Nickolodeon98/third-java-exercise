@@ -1,6 +1,8 @@
 package fileIO.readFile;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileEX {
     private String filename;
@@ -51,8 +53,19 @@ public class FileEX {
         String str = reader.readLine();
         return str;
     }
+
+    public List<String> readAll() throws IOException {
+        List<String> lines = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new FileReader(filename), 16 * 1024);
+        String nextLine = "";
+        while ((nextLine = reader.readLine()) != null){
+            lines.add(nextLine);
+        }
+
+        return lines;
+    }
     public static void main(String[] args) throws IOException {
-        FileEX test = new FileEX("arbitrary_file.txt");
+        FileEX test = new FileEX("./arbitrary_file.txt");
 
         char c = test.readChar();
         System.out.println(c);
@@ -66,6 +79,8 @@ public class FileEX {
         String line = test.readALine();
         System.out.println(line);
 
+        List<String> allLines = test.readAll();
+        System.out.println(allLines);
         /*
         .\.git
         .\.gitignore
