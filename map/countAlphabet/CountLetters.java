@@ -14,7 +14,7 @@ public class CountLetters {
     }
 
     public boolean isAlphabet(char letter) {
-        return ((int) letter > 64 && (int) letter < 91) || ((int) letter > 96 && (int) letter < 123);
+        return (letter >= 'a' && letter <= 'z') || ((int) letter >= 'A' && (int) letter <= 'Z');
     }
 
     public void count() {
