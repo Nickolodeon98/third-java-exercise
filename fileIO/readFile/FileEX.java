@@ -13,5 +13,19 @@ public class FileEX {
         for (File file : files) {
             System.out.println(file);
         }
+
+        /*
+        .\.git
+        .\.gitignore
+        .\.idea
+        .\arbitrary_file.txt
+        .\fileIO
+        .\list
+        .\map
+        .\out
+        .\README.md
+        .\set
+        .\students_list.txt
+        */
     }
 }
