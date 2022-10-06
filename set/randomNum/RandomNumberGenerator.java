@@ -1,4 +1,4 @@
-package set;
+package set.randomNum;
 
 public class RandomNumberGenerator implements NumberGenerator{
     @Override
