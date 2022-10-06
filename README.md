@@ -14,3 +14,6 @@
 ```-> Generator<T>: T 타입의 변수를 랜덤하게 생성하는 인터페이스```
 
 ```->RndAlphabetGenerator, RndAlphabetGeneratorMain: 랜덤한 알파벳 생성 후 HashSet에 저장하여 중복을 제거한 뒤 출력```
+
+
+## 3. Map
