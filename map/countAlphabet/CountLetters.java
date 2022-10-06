@@ -19,10 +19,13 @@ public class CountLetters {
 
     public void count() {
         for (int i = 0; i < str.length(); i++) {
-            if (isAlphabet(str.charAt(i))) {
-                if (alphabetMap.get(str.charAt(i)) != null)
-                    alphabetMap.put(str.charAt(i), alphabetMap.get(str.charAt(i)) + 1);
-                else alphabetMap.put(str.charAt(i), 1);
+            char c = str.charAt(i);
+            if (isAlphabet(c)) {
+                if ((int)c >= 97)
+                    c = Character.toUpperCase(c);
+                if (alphabetMap.get(c) != null)
+                    alphabetMap.put(c, alphabetMap.get(c) + 1);
+                else alphabetMap.put(c, 1);
             }
         }
     }
