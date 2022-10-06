@@ -1,11 +1,13 @@
 package fileIO.readFile;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class FileEX {
+    private String filename;
+    public FileEX(String filename) {
+        this.filename = filename;
+    }
+
     public void printFiles() throws FileNotFoundException {
         FileReader fr = new FileReader("./arbitrary_file.txt");
 
@@ -16,12 +18,12 @@ public class FileEX {
         }
     }
 
-    public char readChar(String filename) throws IOException {
+    public char readChar() throws IOException {
         FileReader fr = new FileReader(filename);
         return (char) fr.read();
     }
 
-    public String read2Chars(String filename) throws IOException {
+    public String read2Chars() throws IOException {
         FileReader fr = new FileReader(filename);
         String str = "";
         str += (char) fr.read();
@@ -30,14 +32,40 @@ public class FileEX {
         return str;
     }
 
-    public static void main(String[] args) throws IOException {
-        FileEX test = new FileEX();
+    public String readNChars(int n) throws IOException {
+        FileReader fr = new FileReader(filename);
+        String str = "";
+        for (int i = 0; i < n; i++) {
+            int asciiCd = fr.read();
+            if (asciiCd == -1) {
+                return str;
+            }
+            str += (char) fr.read();
+        }
 
-        char c = test.readChar("arbitrary_file.txt");
+        return str;
+    }
+
+    public String readALine() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filename), 16 * 1024);
+        String str = reader.readLine();
+        return str;
+    }
+    public static void main(String[] args) throws IOException {
+        FileEX test = new FileEX("arbitrary_file.txt");
+
+        char c = test.readChar();
         System.out.println(c);
 
-        String s = test.read2Chars("arbitrary_file.txt");
+        String s = test.read2Chars();
         System.out.println(s);
+
+        String sN = test.readNChars(5);
+        System.out.println(sN);
+
+        String line = test.readALine();
+        System.out.println(line);
+
         /*
         .\.git
         .\.gitignore

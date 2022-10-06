@@ -5,6 +5,7 @@ import java.util.List;
 
 public class StudentId {
     private int id;
+
     private String name;
 
     public StudentId(int id, String name) {
@@ -30,4 +31,7 @@ public class StudentId {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
 }
