@@ -10,5 +10,7 @@ public class ListEXMain {
         for (String listStudent : listStudents) {
             System.out.println(listStudent);
         }
+
+        System.out.println("인원: " + listStudents.size());
     }
 }
